@@ -1,0 +1,12 @@
+# PACKAGES
+packages/
+
+# BINARY LOCATIONS
+bin/
+obj/
+
+.suo
+
+.vs/
+
+.vscode/
