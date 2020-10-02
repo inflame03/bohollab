@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="testdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="labform">
+          <Key>
+            <PropertyRef Name="accessionno" />
+          </Key>
+          <Property Name="accessionno" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="middlename" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="dateofbirth" Type="datetime" Nullable="false" />
+          <Property Name="age" Type="int" Nullable="false" />
+          <Property Name="gender" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="requisitionerlastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="requisitionerfirstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="requisitionerunit" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="requisitionerphone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="requisitionermobile" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="requisitioneremail" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="requisitionerfax" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="labexamname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="labexamcollecteddatetime" Type="datetime" Nullable="false" />
+          <Property Name="labexamcollectedby" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="clinicalimpression" Type="nvarchar" MaxLength="500" />
+          <Property Name="suspectedagent" Type="nvarchar" MaxLength="500" />
+          <Property Name="specimenreceivedatetime" Type="datetime" />
+          <Property Name="specimenreceivedby" Type="nvarchar" MaxLength="250" />
+          <Property Name="specimenttype" Type="nvarchar" MaxLength="50" />
+          <Property Name="specimentfacility" Type="nvarchar" MaxLength="500" />
+          <Property Name="illnessonsetdatetime" Type="datetime" />
+          <Property Name="specimencollecteddatetime" Type="datetime" />
+          <Property Name="result" Type="nvarchar" MaxLength="500" />
+          <Property Name="resultdatetime" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="testdbModelStoreContainer">
+          <EntitySet Name="labform" EntityType="Self.labform" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="testdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="labform">
+          <Key>
+            <PropertyRef Name="accessionno" />
+          </Key>
+          <Property Name="accessionno" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="middlename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dateofbirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="age" Type="Int32" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="requisitionerlastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="requisitionerfirstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="requisitionerunit" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="requisitionerphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="requisitionermobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="requisitioneremail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="requisitionerfax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="labexamname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="labexamcollecteddatetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="labexamcollectedby" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="clinicalimpression" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="suspectedagent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="specimenreceivedatetime" Type="DateTime" Precision="3" />
+          <Property Name="specimenreceivedby" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="specimenttype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="specimentfacility" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="illnessonsetdatetime" Type="DateTime" Precision="3" />
+          <Property Name="specimencollecteddatetime" Type="DateTime" Precision="3" />
+          <Property Name="result" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="resultdatetime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="testdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="labforms" EntityType="Self.labform" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="testdbModelStoreContainer" CdmEntityContainer="testdbEntities">
+          <EntitySetMapping Name="labforms">
+            <EntityTypeMapping TypeName="testdbModel.labform">
+              <MappingFragment StoreEntitySet="labform">
+                <ScalarProperty Name="accessionno" ColumnName="accessionno" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="requisitionerlastname" ColumnName="requisitionerlastname" />
+                <ScalarProperty Name="requisitionerfirstname" ColumnName="requisitionerfirstname" />
+                <ScalarProperty Name="requisitionerunit" ColumnName="requisitionerunit" />
+                <ScalarProperty Name="requisitionerphone" ColumnName="requisitionerphone" />
+                <ScalarProperty Name="requisitionermobile" ColumnName="requisitionermobile" />
+                <ScalarProperty Name="requisitioneremail" ColumnName="requisitioneremail" />
+                <ScalarProperty Name="requisitionerfax" ColumnName="requisitionerfax" />
+                <ScalarProperty Name="labexamname" ColumnName="labexamname" />
+                <ScalarProperty Name="labexamcollecteddatetime" ColumnName="labexamcollecteddatetime" />
+                <ScalarProperty Name="labexamcollectedby" ColumnName="labexamcollectedby" />
+                <ScalarProperty Name="clinicalimpression" ColumnName="clinicalimpression" />
+                <ScalarProperty Name="suspectedagent" ColumnName="suspectedagent" />
+                <ScalarProperty Name="specimenreceivedatetime" ColumnName="specimenreceivedatetime" />
+                <ScalarProperty Name="specimenreceivedby" ColumnName="specimenreceivedby" />
+                <ScalarProperty Name="specimenttype" ColumnName="specimenttype" />
+                <ScalarProperty Name="specimentfacility" ColumnName="specimentfacility" />
+                <ScalarProperty Name="illnessonsetdatetime" ColumnName="illnessonsetdatetime" />
+                <ScalarProperty Name="specimencollecteddatetime" ColumnName="specimencollecteddatetime" />
+                <ScalarProperty Name="result" ColumnName="result" />
+                <ScalarProperty Name="resultdatetime" ColumnName="resultdatetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
